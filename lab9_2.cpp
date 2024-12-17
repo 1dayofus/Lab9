@@ -1,24 +1,9 @@
-#include<iostream>
-using namespace std;
-
-//Write the function printO() here
-
-int main(){
-	
-	printO(2,2);
-	cout << "\n";
-	
-	printO(3,5);
-	cout << "\n";	
-	
-	printO(5,3);
-	cout << "\n";	
-	
-	printO(0,3);
-	cout << "\n";	
-	
-	printO(7,-1);
-	cout << "\n";	
-	
-	return 0;
-}
+void printO(int row, int column) {
+    if(row < 1 or column < 1) cout << "Invalid input";
+    else {
+        for(int i=0 ; i<row*column ; i++) {
+            if(i % column == 0 and i != 0) cout << endl;
+            cout << 'O';
+        }
+    }
+ }
